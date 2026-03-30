@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Room - 3D 解谜游戏</title>
+  <title>学徒之盒 - The Room 解谜游戏</title>
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
@@ -13,6 +13,14 @@
       <div id="crosshair"></div>
       <div id="hint-panel" class="hidden"></div>
       <div id="inventory"></div>
+      <div id="intro-overlay">
+        <div class="intro-content">
+          <h1>学徒之盒</h1>
+          <p class="letter">你收到了一个包裹，里面是一个精致的木盒，附带一封信：</p>
+          <blockquote>"亲爱的学徒，如果你能打开这个盒子，说明你已经准备好接受真正的训练了。——你的导师"</blockquote>
+          <button id="start-btn">开始探索</button>
+        </div>
+      </div>
     </div>
     <div id="loading-screen">
       <div class="loader"></div>

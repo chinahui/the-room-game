@@ -1,5 +1,5 @@
 /**
- * The Room - 3D 解谜游戏
+ * The Room - 学徒之盒
  * 游戏入口文件
  */
 
@@ -18,8 +18,27 @@ async function init() {
   loadingScreen.classList.add('hidden')
   setTimeout(() => loadingScreen.remove(), 500)
   
-  // 开始游戏循环
-  game.start()
+  // 绑定开始按钮
+  const startBtn = document.getElementById('start-btn')
+  const introOverlay = document.getElementById('intro-overlay')
+  
+  if (startBtn && introOverlay) {
+    startBtn.addEventListener('click', () => {
+      introOverlay.classList.add('hidden')
+      setTimeout(() => introOverlay.remove(), 1000)
+      game.start()
+    })
+    
+    // 也支持按 Enter 开始
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !introOverlay.classList.contains('hidden')) {
+        startBtn.click()
+      }
+    })
+  } else {
+    // 没有开场界面，直接开始
+    game.start()
+  }
 }
 
 // 窗口大小变化处理
