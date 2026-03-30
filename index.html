@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学徒之盒 - The Room 解谜游戏</title>
+  <script type="module" crossorigin src="/the-room-game/assets/index-BUnfpiz7.js"></script>
+  <link rel="stylesheet" crossorigin href="/the-room-game/assets/index-D20PzF0F.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="crosshair"></div>
+      <div id="hint-panel" class="hidden"></div>
+      <div id="inventory"></div>
+      <div id="intro-overlay">
+        <div class="intro-content">
+          <h1>学徒之盒</h1>
+          <p class="letter">你收到了一个包裹，里面是一个精致的木盒，附带一封信：</p>
+          <blockquote>"亲爱的学徒，如果你能打开这个盒子，说明你已经准备好接受真正的训练了。——你的导师"</blockquote>
+          <button id="start-btn">开始探索</button>
+        </div>
+      </div>
+    </div>
+    <div id="loading-screen">
+      <div class="loader"></div>
+      <p>正在加载...</p>
+    </div>
+  </div>
+</body>
+</html>
